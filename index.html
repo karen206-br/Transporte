@@ -1,1 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transporte Cuenca</title>
 
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="diseño.css" />
+
+  <!-- Librería Leaflet para mapa interactivo -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+
+  <!-- Librería QR -->
+  <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+</head>
+<body>
+
+  <header>
+    <h1>🚍 Transporte Cuenca</h1>
+    <p>Consulta la ubicación de tu bus, el estado de tu tarjeta y más</p>
+  </header>
+
+  <div class="container">
+
+    <div class="section">
+      <h2>📍 Buscar Ruta por Línea</h2>
+      <p>Selecciona una línea de bus para visualizar su recorrido estimado:</p>
+      <select id="lineaBus" onchange="mostrarRuta()">
+        <option value="">-- Selecciona una línea --</option>
+        <option value="1">Línea 1: Baños – Terminal – UDA</option>
+        <option value="5">Línea 5: Feria Libre – UDA</option>
+        <option value="13">Línea 13: Ricaurte – Miraflores</option>
+      </select>
+      <p>Visualiza la ubicación:</p>
+      <iframe 
+         id="mapa" style="height: 300px; margin-top: 15px; border-radius: 10px;" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3875.8!2d-79.0051!3d-2.8998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sec!4v1615180796745"
+        allowfullscreen="" loading="lazy">
+      </iframe>
+    
+    </div>
+
+    <div class="section">
+      <h2>📈 Estado del Bus</h2>
+      <p><strong>Bus #35</strong> — Ruta: Totoracocha - El Arenal</p>
+      <p><strong>Espacio disponible:</strong> 15 asientos</p>
+      <p><strong>Última actualización:</strong> Hace 2 minutos</p>
+    </div>
+
+    <div class="section">
+        <h2>💳 Estado de Tarjeta de Bus</h2>
+        <p>Escanea el código QR de tu tarjeta para ver el saldo y estado.</p>
+        <div id="qr-reader" style="width: 100%; max-width: 400px;"></div>
+        <p>O ingresa el número de tu tarjeta:</p>
+        <input type="text" id="cardNumber" placeholder="Ej: 12345678" />
+        <button onclick="consultarTarjeta()">Consultar</button>
+        <div id="resultadoTarjeta" style="margin-top: 15px;"></div>
+    </div>
+
+    <div class="section">
+      <h2>🗓️ Horarios y Rutas</h2>
+      <ul>
+        <li><strong>Línea 1:</strong> Baños – Terminal – UDA (cada 15 min)</li>
+        <li><strong>Línea 5:</strong> Feria Libre – UDA (cada 12 min)</li>
+        <li><strong>Línea 13:</strong> Ricaurte – Miraflores (cada 10 min)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>📩 Reporta un Incidente</h2>
+      <form>
+        <label for="incidente">Describe el problema:</label><br>
+        <textarea id="incidente" rows="4" placeholder="Ej: El bus venía muy lleno, no paró..."></textarea><br>
+        <button type="submit">Enviar reporte</button>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- Script personalizado -->
+  <script src="java.js"></script>
+
+</body>
+</html>
