@@ -18,7 +18,7 @@
 <body>
 
   <header>
-    <h1>🚍 Transporte Cuenca</h1>
+    <h1>Transporte Cuenca</h1>
     <p>Consulta la ubicación de tu bus, el estado de tu tarjeta y más</p>
   </header>
 
@@ -53,7 +53,7 @@
         <p>Escanea el código QR de tu tarjeta para ver el saldo y estado.</p>
         <div id="qr-reader" style="width: 100%; max-width: 400px;"></div>
         <p>O ingresa el número de tu tarjeta:</p>
-        <input type="text" id="cardNumber" placeholder="Ej: 12345678" />
+        <input type="text" id="cardNumber" placeholder="Ej: 12345678" id="texto"/>
         <button onclick="consultarTarjeta()">Consultar</button>
         <div id="resultadoTarjeta" style="margin-top: 15px;"></div>
     </div>
@@ -71,7 +71,7 @@
       <h2>📩 Reporta un Incidente</h2>
       <form>
         <label for="incidente">Describe el problema:</label><br>
-        <textarea id="incidente" rows="4" placeholder="Ej: El bus venía muy lleno, no paró..."></textarea><br>
+        <textarea id="incidente" rows="4" placeholder="Ej: El bus venía muy lleno, no paró..." id="texto"></textarea><br>
         <button type="submit">Enviar reporte</button>
       </form>
     </div>
