@@ -6,7 +6,7 @@ body {
   }
 
   header {
-    background-color: #004d99;
+    background-color: #0e4b87;
     color: white;
     text-align: center;
     padding: 1rem;
@@ -24,6 +24,7 @@ body {
     margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border: 2px solid #052473;
   }
 
   h2 {
@@ -41,16 +42,30 @@ body {
     height: 300px;
     border: none;
     border-radius: 10px;
+    border: 2px solid #052473;
   }
 
   input[type="text"], textarea {
-    width: 70%;
-    padding: 8px;
+    width: 100%;
+    padding: 10px;
     margin-top: 10px;
     border: 1px solid #ccc;
     border-radius: 8px;
   }
-
+  .Texto {
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px solid #052473;
+    border-radius: 8px;
+  }
+  .Texto1 {
+    width: 90%;
+    padding: 1px;
+    margin-top: 10px;
+    border: 2px solid #052473;
+    border-radius: 8px;
+  }
   button {
     margin-top: 10px;
     background-color: #004d99;
