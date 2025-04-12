@@ -1,8 +1,8 @@
 window.addEventListener('DOMContentLoaded', () => {
     // Simulación de tarjetas registradas
     const tarjetasRegistradas = {
-      "12345678": { estado: "Activa", saldo: 1.25 },
-      "98765432": { estado: "Inactiva", saldo: 0.00 },
+      "0011442801": { estado: "Activa", saldo: 1.25 },
+      "0011442802": { estado: "Inactiva", saldo: 0.00 },
       "55555555": { estado: "Activa", saldo: 0.45 }
     };
   
